@@ -32,9 +32,9 @@ def increment(lsquares,index=0):
 
 
 #target is the size of the number you want to hit size of the point group   
-target=24
+target=104
 #numSquares is the number of squares you can use(in group theory the number of classes) to get to the target
-numSquares=5
+numSquares=6
 
 
 
@@ -51,4 +51,5 @@ for i in range(maxtries):
     newans.sort()
     answers.append(newans)
 answers.sort()
+print("the ireducible representations for a point group of size %s and number of classes %s are:" % (str(target),str(numSquares)))
 print(list(answers for answers,_ in itertools.groupby(answers))) #print out only unique lists
